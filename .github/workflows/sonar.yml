@@ -8,7 +8,7 @@ on:
 jobs:
   sonar:
     name: Run SonarCloud Scan
-    runs-on: self-hosted # Replace with the actual label if different
+    runs-on: [self-hosted, Linux, X64] # Replace with the actual label if different
 
     steps:
       - name: Checkout code
