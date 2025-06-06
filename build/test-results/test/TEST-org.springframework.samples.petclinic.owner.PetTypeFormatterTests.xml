@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.springframework.samples.petclinic.owner.PetTypeFormatterTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-06-06T21:06:26" hostname="Joels-Laptop.lan" time="0.01">
+  <properties/>
+  <testcase name="shouldThrowParseException()" classname="org.springframework.samples.petclinic.owner.PetTypeFormatterTests" time="0.009"/>
+  <testcase name="testPrint()" classname="org.springframework.samples.petclinic.owner.PetTypeFormatterTests" time="0.001"/>
+  <testcase name="shouldParse()" classname="org.springframework.samples.petclinic.owner.PetTypeFormatterTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

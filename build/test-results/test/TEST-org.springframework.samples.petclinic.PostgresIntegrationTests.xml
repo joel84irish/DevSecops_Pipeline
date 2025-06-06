@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.springframework.samples.petclinic.PostgresIntegrationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-06-06T21:06:25" hostname="Joels-Laptop.lan" time="0.049">
+  <properties/>
+  <testcase name="testFindAll()" classname="org.springframework.samples.petclinic.PostgresIntegrationTests" time="0.016"/>
+  <testcase name="testOwnerDetails()" classname="org.springframework.samples.petclinic.PostgresIntegrationTests" time="0.032"/>
+  <system-out><![CDATA[2025-06-06T22:06:15.534+01:00  INFO 28389 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.springframework.samples.petclinic.PostgresIntegrationTests]: PostgresIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-06T22:06:15.536+01:00  INFO 28389 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.springframework.samples.petclinic.PetClinicApplication for test class org.springframework.samples.petclinic.PostgresIntegrationTests
+
+
+              |\      _,,,--,,_
+             /,`.-'`'   ._  \-;;,_
+  _______ __|,4-  ) )_   .;.(__`'-'__     ___ __    _ ___ _______
+ |       | '---''(_/._)-'(_\_)   |   |   |   |  |  | |   |       |
+ |    _  |    ___|_     _|       |   |   |   |   |_| |   |       | __ _ _
+ |   |_| |   |___  |   | |       |   |   |   |       |   |       | \ \ \ \
+ |    ___|    ___| |   | |      _|   |___|   |  _    |   |      _|  \ \ \ \
+ |   |   |   |___  |   | |     |_|       |   | | |   |   |     |_    ) ) ) )
+ |___|   |_______| |___| |_______|_______|___|_|  |__|___|_______|  / / / /
+ ==================================================================/_/_/_/
+
+:: Built with Spring Boot :: 3.2.0
+
+
+2025-06-06T22:06:15.545+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PostgresIntegrationTests         : Starting PostgresIntegrationTests using Java 17.0.15 with PID 28389 (started by joelirish in /Users/joelirish/DevOps/DevSecops_Pipeline)
+2025-06-06T22:06:15.545+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PostgresIntegrationTests         : The following 1 profile is active: "postgres"
+2025-06-06T22:06:15.547+01:00  INFO 28389 --- [    Test worker] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/Users/joelirish/DevOps/DevSecops_Pipeline/docker-compose.yml'
+2025-06-06T22:06:16.022+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   : time="2025-06-06T22:06:16+01:00" level=warning msg="/Users/joelirish/DevOps/DevSecops_Pipeline/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2025-06-06T22:06:16.031+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  postgres Pulling 
+2025-06-06T22:06:17.730+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Pulling fs layer 
+2025-06-06T22:06:17.731+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Pulling fs layer 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Waiting 
+2025-06-06T22:06:17.732+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Waiting 
+2025-06-06T22:06:17.733+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Waiting 
+2025-06-06T22:06:18.197+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Downloading [>                                                  ]  45.93kB/4.499MB
+2025-06-06T22:06:18.228+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Downloading [========================================>          ]     934B/1.165kB
+2025-06-06T22:06:18.229+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Downloading [==================================================>]  1.165kB/1.165kB
+2025-06-06T22:06:18.229+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Verifying Checksum 
+2025-06-06T22:06:18.229+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Download complete 
+2025-06-06T22:06:18.232+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [>                                                  ]  294.9kB/29.18MB
+2025-06-06T22:06:18.299+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Downloading [==============================>                    ]  2.751MB/4.499MB
+2025-06-06T22:06:18.334+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [=====>                                             ]   2.96MB/29.18MB
+2025-06-06T22:06:18.346+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Verifying Checksum 
+2025-06-06T22:06:18.347+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Download complete 
+2025-06-06T22:06:18.439+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [=============>                                     ]  7.703MB/29.18MB
+2025-06-06T22:06:18.542+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [======================>                            ]  13.35MB/29.18MB
+2025-06-06T22:06:18.643+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [=================================>                 ]  19.58MB/29.18MB
+2025-06-06T22:06:18.647+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Downloading [>                                                  ]  14.62kB/1.381MB
+2025-06-06T22:06:18.733+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Downloading [>                                                  ]  81.92kB/8.069MB
+2025-06-06T22:06:18.750+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Verifying Checksum 
+2025-06-06T22:06:18.750+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Download complete 
+2025-06-06T22:06:18.753+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Downloading [=======================================>           ]  23.13MB/29.18MB
+2025-06-06T22:06:18.835+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Downloading [======>                                            ]  982.5kB/8.069MB
+2025-06-06T22:06:18.872+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Verifying Checksum 
+2025-06-06T22:06:18.872+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Download complete 
+2025-06-06T22:06:18.907+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [>                                                  ]  294.9kB/29.18MB
+2025-06-06T22:06:18.937+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Downloading [============================>                      ]  4.537MB/8.069MB
+2025-06-06T22:06:19.008+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [==============>                                    ]  8.258MB/29.18MB
+2025-06-06T22:06:19.011+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Verifying Checksum 
+2025-06-06T22:06:19.011+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Download complete 
+2025-06-06T22:06:19.100+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Downloading [>                                                  ]  11.88kB/1.108MB
+2025-06-06T22:06:19.109+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [=======================>                           ]  13.86MB/29.18MB
+2025-06-06T22:06:19.133+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Verifying Checksum 
+2025-06-06T22:06:19.133+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Download complete 
+2025-06-06T22:06:19.213+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [========================================>          ]  23.89MB/29.18MB
+2025-06-06T22:06:19.216+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Downloading [==================================================>]     116B/116B
+2025-06-06T22:06:19.217+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Verifying Checksum 
+2025-06-06T22:06:19.217+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Download complete 
+2025-06-06T22:06:19.315+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [=============================================>     ]  26.54MB/29.18MB
+2025-06-06T22:06:19.383+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Downloading [==============>                                    ]     934B/3.14kB
+2025-06-06T22:06:19.384+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Downloading [==================================================>]   3.14kB/3.14kB
+2025-06-06T22:06:19.384+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Verifying Checksum 
+2025-06-06T22:06:19.384+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Download complete 
+2025-06-06T22:06:19.488+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [================================================>  ]  28.31MB/29.18MB
+2025-06-06T22:06:19.548+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [>                                                  ]  540.7kB/106.9MB
+2025-06-06T22:06:19.551+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Extracting [==================================================>]  29.18MB/29.18MB
+2025-06-06T22:06:19.574+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  25d3892798f8 Pull complete 
+2025-06-06T22:06:19.576+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Extracting [==================================================>]  1.165kB/1.165kB
+2025-06-06T22:06:19.576+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Extracting [==================================================>]  1.165kB/1.165kB
+2025-06-06T22:06:19.583+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  77c2305dd978 Pull complete 
+2025-06-06T22:06:19.584+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Extracting [>                                                  ]  65.54kB/4.499MB
+2025-06-06T22:06:19.606+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Downloading [====>                                              ]     934B/9.927kB
+2025-06-06T22:06:19.606+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Downloading [==================================================>]  9.927kB/9.927kB
+2025-06-06T22:06:19.606+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Verifying Checksum 
+2025-06-06T22:06:19.606+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Download complete 
+2025-06-06T22:06:19.636+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Extracting [==================================================>]  4.499MB/4.499MB
+2025-06-06T22:06:19.656+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  54c99c28f11f Pull complete 
+2025-06-06T22:06:19.656+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Extracting [=>                                                 ]  32.77kB/1.381MB
+2025-06-06T22:06:19.657+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [==>                                                ]  5.913MB/106.9MB
+2025-06-06T22:06:19.670+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Extracting [==================================================>]  1.381MB/1.381MB
+2025-06-06T22:06:19.675+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5feeada49781 Pull complete 
+2025-06-06T22:06:19.677+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Extracting [>                                                  ]   98.3kB/8.069MB
+2025-06-06T22:06:19.770+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [=====>                                             ]  11.25MB/106.9MB
+2025-06-06T22:06:19.779+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Extracting [===================================>               ]    5.8MB/8.069MB
+2025-06-06T22:06:19.805+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Downloading [==================================================>]     129B/129B
+2025-06-06T22:06:19.805+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Verifying Checksum 
+2025-06-06T22:06:19.805+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Download complete 
+2025-06-06T22:06:19.829+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Extracting [==================================================>]  8.069MB/8.069MB
+2025-06-06T22:06:19.838+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6baaea6e6673 Pull complete 
+2025-06-06T22:06:19.839+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Extracting [=>                                                 ]  32.77kB/1.108MB
+2025-06-06T22:06:19.857+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Extracting [==================================================>]  1.108MB/1.108MB
+2025-06-06T22:06:19.857+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Extracting [==================================================>]  1.108MB/1.108MB
+2025-06-06T22:06:19.869+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c1dcdf0cbea0 Pull complete 
+2025-06-06T22:06:19.871+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Extracting [==================================================>]     116B/116B
+2025-06-06T22:06:19.871+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Extracting [==================================================>]     116B/116B
+2025-06-06T22:06:19.875+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  3bb7d395f8d0 Pull complete 
+2025-06-06T22:06:19.877+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Extracting [==================================================>]   3.14kB/3.14kB
+2025-06-06T22:06:19.877+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Extracting [==================================================>]   3.14kB/3.14kB
+2025-06-06T22:06:19.881+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  6047577c3718 Pull complete 
+2025-06-06T22:06:19.905+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [=========>                                         ]  20.38MB/106.9MB
+2025-06-06T22:06:20.013+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [=============>                                     ]  29.01MB/106.9MB
+2025-06-06T22:06:20.113+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [===============>                                   ]  33.31MB/106.9MB
+2025-06-06T22:06:20.221+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [===================>                               ]  41.92MB/106.9MB
+2025-06-06T22:06:20.221+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Downloading [==================================================>]     169B/169B
+2025-06-06T22:06:20.221+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Download complete 
+2025-06-06T22:06:20.260+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Downloading [========>                                          ]     934B/5.421kB
+2025-06-06T22:06:20.260+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Downloading [==================================================>]  5.421kB/5.421kB
+2025-06-06T22:06:20.260+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Verifying Checksum 
+2025-06-06T22:06:20.260+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Download complete 
+2025-06-06T22:06:20.355+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [======================>                            ]  48.35MB/106.9MB
+2025-06-06T22:06:20.457+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [=========================>                         ]  54.27MB/106.9MB
+2025-06-06T22:06:20.565+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [============================>                      ]  61.27MB/106.9MB
+2025-06-06T22:06:20.668+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [===============================>                   ]   67.7MB/106.9MB
+2025-06-06T22:06:20.693+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Downloading [==================================================>]     183B/183B
+2025-06-06T22:06:20.693+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Verifying Checksum 
+2025-06-06T22:06:20.693+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Download complete 
+2025-06-06T22:06:20.774+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [==================================>                ]  74.12MB/106.9MB
+2025-06-06T22:06:20.920+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [======================================>            ]  81.64MB/106.9MB
+2025-06-06T22:06:21.023+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [=========================================>         ]  89.68MB/106.9MB
+2025-06-06T22:06:21.135+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [===========================================>       ]  94.01MB/106.9MB
+2025-06-06T22:06:21.235+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Downloading [================================================>  ]  103.1MB/106.9MB
+2025-06-06T22:06:21.315+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Verifying Checksum 
+2025-06-06T22:06:21.316+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Download complete 
+2025-06-06T22:06:21.367+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [>                                                  ]  557.1kB/106.9MB
+2025-06-06T22:06:21.469+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=====>                                             ]  11.14MB/106.9MB
+2025-06-06T22:06:21.574+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [==========>                                        ]  21.73MB/106.9MB
+2025-06-06T22:06:21.676+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=============>                                     ]  29.52MB/106.9MB
+2025-06-06T22:06:21.778+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=================>                                 ]  38.44MB/106.9MB
+2025-06-06T22:06:21.879+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [========================>                          ]  51.81MB/106.9MB
+2025-06-06T22:06:21.980+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=============================>                     ]  64.06MB/106.9MB
+2025-06-06T22:06:22.082+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=================================>                 ]  70.75MB/106.9MB
+2025-06-06T22:06:22.184+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [====================================>              ]  78.54MB/106.9MB
+2025-06-06T22:06:22.285+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [========================================>          ]   86.9MB/106.9MB
+2025-06-06T22:06:22.395+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [============================================>      ]  95.26MB/106.9MB
+2025-06-06T22:06:22.573+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [===============================================>   ]  101.4MB/106.9MB
+2025-06-06T22:06:22.690+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [================================================>  ]  103.6MB/106.9MB
+2025-06-06T22:06:22.795+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [=================================================> ]  105.3MB/106.9MB
+2025-06-06T22:06:22.873+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Extracting [==================================================>]  106.9MB/106.9MB
+2025-06-06T22:06:23.036+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8ed018982a51 Pull complete 
+2025-06-06T22:06:23.039+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Extracting [==================================================>]  9.927kB/9.927kB
+2025-06-06T22:06:23.039+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Extracting [==================================================>]  9.927kB/9.927kB
+2025-06-06T22:06:23.053+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  fb65ed462c91 Pull complete 
+2025-06-06T22:06:23.056+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Extracting [==================================================>]     129B/129B
+2025-06-06T22:06:23.056+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Extracting [==================================================>]     129B/129B
+2025-06-06T22:06:23.068+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  b35a9480be59 Pull complete 
+2025-06-06T22:06:23.070+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Extracting [==================================================>]     169B/169B
+2025-06-06T22:06:23.070+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Extracting [==================================================>]     169B/169B
+2025-06-06T22:06:23.092+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f97566042540 Pull complete 
+2025-06-06T22:06:23.094+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Extracting [==================================================>]  5.421kB/5.421kB
+2025-06-06T22:06:23.095+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Extracting [==================================================>]  5.421kB/5.421kB
+2025-06-06T22:06:23.105+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5e841a787a8b Pull complete 
+2025-06-06T22:06:23.108+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Extracting [==================================================>]     183B/183B
+2025-06-06T22:06:23.108+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Extracting [==================================================>]     183B/183B
+2025-06-06T22:06:23.119+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5dd3ef301ac Pull complete 
+2025-06-06T22:06:23.141+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  postgres Pulled 
+2025-06-06T22:06:23.208+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network devsecops_pipeline_default  Creating
+2025-06-06T22:06:23.247+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network devsecops_pipeline_default  Created
+2025-06-06T22:06:23.268+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Creating
+2025-06-06T22:06:23.457+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Created
+2025-06-06T22:06:23.463+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Starting
+2025-06-06T22:06:23.629+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Started
+2025-06-06T22:06:23.630+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Waiting
+2025-06-06T22:06:24.144+01:00  INFO 28389 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container devsecops_pipeline-postgres-1  Healthy
+2025-06-06T22:06:25.119+01:00  INFO 28389 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T22:06:25.125+01:00  INFO 28389 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-06-06T22:06:25.183+01:00  INFO 28389 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-06-06T22:06:25.183+01:00  INFO 28389 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T22:06:25.184+01:00  INFO 28389 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-06-06T22:06:25.213+01:00  INFO 28389 --- [    Test worker] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-06T22:06:25.213+01:00  INFO 28389 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 250 ms
+2025-06-06T22:06:25.258+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-06-06T22:06:25.381+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4883e2af
+2025-06-06T22:06:25.381+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-06-06T22:06:25.448+01:00  INFO 28389 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T22:06:25.449+01:00  INFO 28389 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T22:06:25.450+01:00  INFO 28389 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T22:06:25.512+01:00  INFO 28389 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T22:06:25.513+01:00  INFO 28389 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T22:06:25.833+01:00  INFO 28389 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2025-06-06T22:06:25.845+01:00  INFO 28389 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62495 (http) with context path ''
+2025-06-06T22:06:25.848+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PostgresIntegrationTests         : Started PostgresIntegrationTests in 10.31 seconds (process running for 41.9)
+2025-06-06T22:06:25.872+01:00  INFO 28389 --- [o-auto-3-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T22:06:25.872+01:00  INFO 28389 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T22:06:25.872+01:00  INFO 28389 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

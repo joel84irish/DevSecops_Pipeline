@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.springframework.samples.petclinic.PetClinicIntegrationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-06-06T21:06:15" hostname="Joels-Laptop.lan" time="0.039">
+  <properties/>
+  <testcase name="testFindAll()" classname="org.springframework.samples.petclinic.PetClinicIntegrationTests" time="0.013"/>
+  <testcase name="testOwnerDetails()" classname="org.springframework.samples.petclinic.PetClinicIntegrationTests" time="0.025"/>
+  <system-out><![CDATA[2025-06-06T22:06:14.765+01:00  INFO 28389 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.springframework.samples.petclinic.PetClinicIntegrationTests]: PetClinicIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-06T22:06:14.772+01:00  INFO 28389 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.springframework.samples.petclinic.PetClinicApplication for test class org.springframework.samples.petclinic.PetClinicIntegrationTests
+
+
+              |\      _,,,--,,_
+             /,`.-'`'   ._  \-;;,_
+  _______ __|,4-  ) )_   .;.(__`'-'__     ___ __    _ ___ _______
+ |       | '---''(_/._)-'(_\_)   |   |   |   |  |  | |   |       |
+ |    _  |    ___|_     _|       |   |   |   |   |_| |   |       | __ _ _
+ |   |_| |   |___  |   | |       |   |   |   |       |   |       | \ \ \ \
+ |    ___|    ___| |   | |      _|   |___|   |  _    |   |      _|  \ \ \ \
+ |   |   |   |___  |   | |     |_|       |   | | |   |   |     |_    ) ) ) )
+ |___|   |_______| |___| |_______|_______|___|_|  |__|___|_______|  / / / /
+ ==================================================================/_/_/_/
+
+:: Built with Spring Boot :: 3.2.0
+
+
+2025-06-06T22:06:14.787+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PetClinicIntegrationTests        : Starting PetClinicIntegrationTests using Java 17.0.15 with PID 28389 (started by joelirish in /Users/joelirish/DevOps/DevSecops_Pipeline)
+2025-06-06T22:06:14.787+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PetClinicIntegrationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T22:06:14.952+01:00  INFO 28389 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T22:06:14.959+01:00  INFO 28389 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2025-06-06T22:06:15.017+01:00  INFO 28389 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-06-06T22:06:15.018+01:00  INFO 28389 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T22:06:15.018+01:00  INFO 28389 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-06-06T22:06:15.036+01:00  INFO 28389 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-06T22:06:15.036+01:00  INFO 28389 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2025-06-06T22:06:15.082+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-06T22:06:15.145+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:0b96ab9d-5f59-4c09-9c4b-731b5699e1c5 user=SA
+2025-06-06T22:06:15.145+01:00  INFO 28389 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-06T22:06:15.179+01:00  INFO 28389 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T22:06:15.180+01:00  INFO 28389 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T22:06:15.182+01:00  INFO 28389 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T22:06:15.227+01:00  INFO 28389 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T22:06:15.227+01:00  INFO 28389 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T22:06:15.470+01:00  INFO 28389 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2025-06-06T22:06:15.491+01:00  INFO 28389 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62443 (http) with context path ''
+2025-06-06T22:06:15.493+01:00  INFO 28389 --- [    Test worker] o.s.s.p.PetClinicIntegrationTests        : Started PetClinicIntegrationTests in 0.717 seconds (process running for 31.545)
+2025-06-06T22:06:15.511+01:00  INFO 28389 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T22:06:15.511+01:00  INFO 28389 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T22:06:15.511+01:00  INFO 28389 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
