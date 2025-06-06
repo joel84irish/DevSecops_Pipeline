@@ -44,6 +44,13 @@ jobs:
         env:
           JF_URL: https://trialed2lwf.jfrog.io
           JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
+
+      - name: Print directory after build
+        run: |
+            pwd
+            ls -la
+            ls -la target/
+  
       - name: Upload JAR to JFrog
         run: |
            jf rt u "target/*.jar" "petjfrog-repo/"     
